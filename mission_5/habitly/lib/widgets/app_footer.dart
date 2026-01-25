@@ -20,20 +20,12 @@ class _AppFooterState extends State<AppFooter> {
   Widget build(BuildContext context) {
     return Align(
       alignment: Alignment.bottomCenter,
-      child: MouseRegion(
-        onEnter: (_) {
-          if (!isExpanded) {
-            setState(() => isExpanded = true);
-          }
-        },
-        onExit: (_) {
-          setState(() => isExpanded = false);
-        },
+      child: GestureDetector(
+        onTap: toggleFooter,
         child: AnimatedContainer(
           duration: const Duration(milliseconds: 400),
           curve: Curves.easeInOut,
           width: double.infinity,
-          height: isExpanded ? null : 80,
           padding: EdgeInsets.all(isExpanded ? 20 : 10),
           decoration: BoxDecoration(
             color: const Color(0xFF2FB969),
@@ -41,17 +33,12 @@ class _AppFooterState extends State<AppFooter> {
               topLeft: Radius.circular(isExpanded ? 20 : 0),
               topRight: Radius.circular(isExpanded ? 20 : 0),
             ),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.black.withOpacity(0.2),
-                blurRadius: 15,
-                offset: const Offset(0, -3),
-              ),
-            ],
           ),
           child: AnimatedSwitcher(
             duration: const Duration(milliseconds: 300),
-            child: isExpanded ? _buildExpandedContent() : _buildCollapsedContent(),
+            child: isExpanded
+                ? _buildExpandedContent()
+                : _buildCollapsedContent(),
           ),
         ),
       ),
@@ -76,7 +63,7 @@ class _AppFooterState extends State<AppFooter> {
           ],
         ),
         child: const Icon(
-          Icons.info_outline,
+          Icons.check_circle_outline,
           color: Color(0xFF2FB969),
           size: 32,
         ),
@@ -103,10 +90,7 @@ class _AppFooterState extends State<AppFooter> {
             ),
             IconButton(
               onPressed: toggleFooter,
-              icon: const Icon(
-                Icons.close_rounded,
-                color: Colors.white,
-              ),
+              icon: const Icon(Icons.close_rounded, color: Colors.white),
               tooltip: 'Tutup',
             ),
           ],
@@ -114,9 +98,9 @@ class _AppFooterState extends State<AppFooter> {
         const SizedBox(height: 12),
 
         // Contact Info
-        _buildInfoRow("📍", "Batam, Kepulauan Riau, Indonesia"),
+        _buildInfoRow("📍", "Padang, Sumatera Barat, Indonesia"),
         const SizedBox(height: 6),
-        _buildInfoRow("📞", "+62 812-3456-7890"),
+        _buildInfoRow("📞", "+62 878-9523-8280"),
         const SizedBox(height: 12),
 
         // Company Info
@@ -133,10 +117,7 @@ class _AppFooterState extends State<AppFooter> {
         const Center(
           child: Text(
             "© 2026 Habitly - All Rights Reserved",
-            style: TextStyle(
-              color: Colors.white70,
-              fontSize: 12,
-            ),
+            style: TextStyle(color: Colors.white70, fontSize: 12),
           ),
         ),
       ],
@@ -146,18 +127,12 @@ class _AppFooterState extends State<AppFooter> {
   Widget _buildInfoRow(String icon, String text) {
     return Row(
       children: [
-        Text(
-          icon,
-          style: const TextStyle(fontSize: 16),
-        ),
+        Text(icon, style: const TextStyle(fontSize: 16)),
         const SizedBox(width: 8),
         Expanded(
           child: Text(
             text,
-            style: const TextStyle(
-              color: Colors.white,
-              fontSize: 13,
-            ),
+            style: const TextStyle(color: Colors.white, fontSize: 13),
           ),
         ),
       ],
