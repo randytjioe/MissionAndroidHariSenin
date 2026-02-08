@@ -1,10 +1,5 @@
 # 🎯 Habitly - Habit Tracker App
 
-![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
-![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
-![Riverpod](https://img.shields.io/badge/Riverpod-00C4B3?style=for-the-badge)
-![Hive](https://img.shields.io/badge/Hive-FF6F00?style=for-the-badge)
-
 **Habitly** adalah aplikasi mobile untuk melacak dan mengelola kebiasaan harian Anda. Dibangun dengan Flutter menggunakan state management modern (Riverpod) dan local database (Hive) untuk pengalaman pengguna yang seamless dan data yang persistent.
 
 ---
@@ -106,7 +101,7 @@ lib/
 
 1. **Clone repository**
 ```bash
-git clone https://github.com/username/habitly.git
+git clone https://github.com/randytjioe/MissionAndroidHariSenin/tree/main/mission_6_b/habitly
 cd habitly
 ```
 
@@ -400,8 +395,8 @@ in the Software without restriction...
 
 **Randy** - Creator & Mobile Developer
 
-- 📍 Batam, Kepulauan Riau, Indonesia
-- 📞 +62 812-3456-7890
+- 📍 Padang, Sumatera Barat, Indonesia
+- 📞 +62 87895238280
 - 🏢 PT Habitly Sehat Teknologi
 - 👥 Flutter Dev Indonesia Community
 
@@ -417,16 +412,6 @@ in the Software without restriction...
 
 ---
 
-## 📞 Support
-
-Jika Anda mengalami masalah atau memiliki pertanyaan:
-
-1. 📖 Baca dokumentasi di atas
-2. 🔍 Check [Issues](https://github.com/username/habitly/issues)
-3. 💬 Buat issue baru dengan detail lengkap
-4. 📧 Email: support@habitly.com
-
----
 
 ## ⭐ Show Your Support
 
@@ -436,9 +421,6 @@ Jika project ini membantu Anda, berikan ⭐ di GitHub!
 
 <div align="center">
 
-**Made with ❤️ using Flutter**
-
-[Website](https://habitly.com) • [Documentation](https://docs.habitly.com) • [Community](https://community.habitly.com)
 
 © 2026 Habitly - All Rights Reserved
 
