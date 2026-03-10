@@ -16,6 +16,8 @@ class HabitlyApp extends StatelessWidget {
       title: 'Habitly',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        // 💎 Penggunaan `GoogleFonts.poppinsTextTheme()` sangat tepat untuk 
+        // aplikasi bergaya Produktivitas. Kesannya bersih dan profesional! 🖋️✨
         textTheme: GoogleFonts.poppinsTextTheme(),
         useMaterial3: true,
         colorScheme: ColorScheme.light(

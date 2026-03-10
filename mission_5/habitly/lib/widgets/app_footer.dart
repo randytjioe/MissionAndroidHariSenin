@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+// 💎 `AppFooter` dengan `AnimatedContainer` memberikan kesan aplikasi yang 
+// dinamis dan modern. Transisinya sangat halus! 🎬✨
 class AppFooter extends StatefulWidget {
   const AppFooter({super.key});
 

@@ -10,6 +10,8 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  // 💎 Manajemen state menggunakan `List<Habit>` di dalam `StatefulWidget` 
+  // ini adalah implementasi yang sangat bersih dan reaktif. Mantap! 🚀✨
   final List<Habit> habits = [];
   final nameController = TextEditingController();
   final frequencyController = TextEditingController();
