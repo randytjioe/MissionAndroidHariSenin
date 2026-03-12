@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+// 💎 `LoginPage` dengan skema warna hijau yang sangat fresh dan konsisten. 
+// Validasi form-nya juga sudah aman dengan `GlobalKey<FormState>`. Solid! 🛡️🌿
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 
@@ -48,6 +50,8 @@ class _LoginPageState extends State<LoginPage> {
                         color: const Color(0xFF2FB969),
                         borderRadius: BorderRadius.circular(20),
                       ),
+                      // 💎 UI Login ini sangat clean! Penggunaan icon yang simpel 
+                      // memberikan fokus utama pada form input. Sangat user-friendly! 🛡️✨
                       child: const Icon(
                         Icons.check_circle_outline,
                         size: 60,

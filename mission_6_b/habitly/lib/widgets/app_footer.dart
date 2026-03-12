@@ -97,6 +97,7 @@ class _AppFooterState extends State<AppFooter> {
         ),
         const SizedBox(height: 12),
 
+        //{Inline Review: Informasi personal/company hardcoded sebaiknya dipindah ke konfigurasi terpisah atau dihapus dari release build.}
         // Contact Info
         _buildInfoRow("📍", "Padang, Sumatera Barat, Indonesia"),
         const SizedBox(height: 6),

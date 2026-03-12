@@ -40,6 +40,7 @@ class HabitNotifier extends StateNotifier<HabitState> {
   Future<void> _loadHabits() async {
     try {
       state = state.copyWith(isLoading: true);
+      //{Inline Review: Hindari artificial delay pada flow production karena menambah latency tanpa manfaat fungsional.}
       await Future.delayed(const Duration(milliseconds: 500)); // Simulate loading
       
       final habits = _habitBox.values.toList();
@@ -80,6 +81,7 @@ class HabitNotifier extends StateNotifier<HabitState> {
   ) async {
     try {
       final habit = state.habits[index];
+      //{Inline Review: Hindari mutasi langsung model; gunakan copyWith/immutable update untuk state yang lebih aman.}
       habit.name = name;
       habit.frequency = frequency;
       habit.target = target;
@@ -96,6 +98,7 @@ class HabitNotifier extends StateNotifier<HabitState> {
   // Delete habit
   Future<void> deleteHabit(int index) async {
     try {
+      //{Inline Review: Operasi berbasis index rentan mismatch; lebih aman gunakan id/key stabil.}
       final habit = state.habits[index];
       await habit.delete();
       
