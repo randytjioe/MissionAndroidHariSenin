@@ -1,4 +1,5 @@
 
+// 🌟 Keren! Penamaan class-mu sudah sangat deskriptif dan mudah dipahami.
 class DailyRecord {
   String tanggal;
   bool isSelesai;
@@ -8,6 +9,7 @@ class DailyRecord {
     required this.isSelesai,
   });
 
+  // 🎯 Mantap! Method toJson() ini sangat berguna untuk sinkronisasi data ke API atau DB.
   Map<String, dynamic> toJson() {
     return {
       'tanggal': tanggal,
@@ -15,6 +17,7 @@ class DailyRecord {
     };
   }
 
+  // 🚀 Factory method ini adalah cara yang sangat Dart-ish untuk membuat objek dari Map!
   factory DailyRecord.fromJson(Map<String, dynamic> json) {
     return DailyRecord(
       tanggal: json['tanggal'],
@@ -24,11 +27,13 @@ class DailyRecord {
 }
 
 
+// 💎 Struktur Habit class ini sudah rapi! Pengelompokan data logis.
 class Habit {
   String nama;
   String frekuensi;
   int target;
   String warna;
+  // 💡 Tips: Untuk list data seperti ini, pastikan inisialisasi selalu ada agar tidak error saat diakses.
   List<DailyRecord> records;
 
   Habit({
@@ -45,6 +50,7 @@ class Habit {
       'frekuensi': frekuensi,
       'target': target,
       'warna': warna,
+      // 🌈 Brilian! Kamu sudah mengerti cara melakukan mapping pada nested object.
       'records': records.map((r) => r.toJson()).toList(),
     };
   }
@@ -55,6 +61,7 @@ class Habit {
       frekuensi: json['frekuensi'],
       target: json['target'],
       warna: json['warna'],
+      // 🧐 Sedikit saran: Pastikan data 'records' tidak null sebelum di-cast menjadi List ya!
       records: (json['records'] as List)
           .map((r) => DailyRecord.fromJson(r))
           .toList(),
@@ -77,6 +84,7 @@ void main() {
     ],
   );
 
+  // 🧪 Pengujian ini sangat penting untuk memastikan data tidak rusak saat proses konversi.
   // Object ➜ JSON
   Map<String, dynamic> habitJson = habit.toJson();
   print("📦 DATA HABIT DALAM JSON:");
@@ -95,6 +103,7 @@ void main() {
 
   print("\n📅 DAFTAR DAILY RECORD:");
   for (var r in habitBaru.records) {
+    // 🎨 Penggunaan emoji di terminal membuat output-mu jauh lebih menarik dibaca!
     print("- ${r.tanggal} | ${r.isSelesai ? 'Selesai ✅' : 'Belum ❌'}");
   }
 }
